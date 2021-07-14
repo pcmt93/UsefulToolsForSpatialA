@@ -1,0 +1,10 @@
+
+---
+title: "Very useful tools in R/Python for Geospatial Analysis"
+---
+  
+  In this document, I'm going to explain some very useful and easy 
+  tools that I use in R for geospatial analysis and for manipulate 
+  spatial object (e.g shapefiles, excel files, raster files,
+  spatial databases, etc.).
+  
