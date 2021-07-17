@@ -20,15 +20,15 @@ title: "Very useful tools in R/Python for Geospatial Analysis"
   ```{r include = FALSE}
     # set working directory - this does not appear in the document
     rm(list = ls())
-    
-    setwd("~/Dropbox/paulo_RA/Narcos/databases") # Paulo's MacbookPro
 
     library(rgdal)
   ```
   Open shapefiles:
   
   ```{r}
-    mun <- readOGR("./municipios/update", "BAS_LIM_DISTRITOS")
+    mun <- readOGR(paste0("~/Dropbox/paulo_RA/Narcos/databases/municipios/update"), 
+                          "BAS_LIM_DISTRITOS")
+                          
     # An easly inspect some objects:
     plot(mun)
     
