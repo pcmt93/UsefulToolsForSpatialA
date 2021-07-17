@@ -3,8 +3,33 @@
 title: "Very useful tools in R/Python for Geospatial Analysis"
 ---
   
-  In this document, I'm going to explain some very useful and easy 
-  tools that I use in R for geospatial analysis and for manipulate 
-  spatial object (e.g shapefiles, excel files, raster files,
-  spatial databases, etc.).
+  In this document, I will explain some very useful and easy 
+  tools that I use in R for geospatial analysis and for spatial object
+  manipulation (e.g shapefiles, raster files,
+  spatial databases, etc.). I also going to present some libraries and 
+  commands that I usually use in my-day-to-day code work for cleaning 
+  and dataset manipulation (Stata alike)
   
+  For all this I'm going to use mainly examples of public databases
+  from the Peruvian context (the country that I come from). This is going to be 
+  a very short post, but I'm going to try to include great variety of tools
+  at least for every basic analysis (e.g open spatial object, modify them, plot
+  maps, polygons, points, etc.)
+  
+
+  ```{r include = FALSE}
+    # set working directory - this does not appear in the document
+    rm(list = ls())
+
+    library(rgdal)
+  ```
+  Open shapefiles:
+  
+  ```{r}
+    mun <- readOGR(paste0("~/Dropbox/paulo_RA/Narcos/databases/municipios/update"), 
+                          "BAS_LIM_DISTRITOS")
+                          
+    # An easly inspect some objects:
+    plot(mun)
+    
+  ```
