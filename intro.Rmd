@@ -1,6 +1,7 @@
 
 ---
 title: "Very useful tools in R/Python for Geospatial Analysis"
+output: github_document
 ---
   
   In this document, I will explain some very useful and easy 
@@ -23,6 +24,9 @@ title: "Very useful tools in R/Python for Geospatial Analysis"
 
     library(rgdal)
   ```
+  
+  ## The basics
+  
   Open shapefiles:
   
   ```{r}
