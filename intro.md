@@ -90,4 +90,18 @@ going to be useful later on) as follow:
 
 ``` r
   enaho <- spTransform(enaho, crs(mun))
+  
+  # A simplify version of the map for graph purpose
+  mun2 <- tidy(mun) 
 ```
+
+    ## Regions defined for each Polygons
+
+``` r
+  ggplot(mun2, aes(x = long, y = lat, group = group)) +
+  geom_polygon(color = "black", size = 0.1) +
+  coord_equal() +
+  theme_minimal()
+```
+
+![](intro_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
