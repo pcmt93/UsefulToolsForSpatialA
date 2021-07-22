@@ -29,6 +29,10 @@ output: github_document
     library(readstata13)
     library(raster)
     
+    # For graph: 
+    library(tidyverse)
+    library(broom)
+    
   ```
   
 ## The basics
@@ -81,6 +85,14 @@ output: github_document
   
   ``` {r}
     enaho <- spTransform(enaho, crs(mun))
+    
+    # A simplify version of the map for graph purpose
+    mun2 <- tidy(mun) 
+    ggplot(mun2, aes(x = long, y = lat, group = group)) +
+    geom_polygon(color = "black", size = 0.1) +
+    coord_equal() +
+    theme_minimal()
+    
     
   ```
   
