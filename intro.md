@@ -91,9 +91,26 @@ going to be useful later on) as follow:
 ``` r
   enaho <- spTransform(enaho, crs(mun))
   
-  # And of course we can plot it together in a graph 
-  plot(mun) # And we can plot it 
-  plot(enaho, add = TRUE, col='red', pch=1, cex = .2) # And we can plot it
+  # And of course we can plot it together in a graph, and add one more 
+  # shapeline of lines 
+  
+  # Rivers in Peru:
+  
+  rivers <- readOGR(paste0("~/Dropbox/BDatos/Shape/PER_wat"), 
+                        "PER_water_areas_dcw") 
+```
+
+    ## OGR data source with driver: ESRI Shapefile 
+    ## Source: "/Users/ptrifu/Dropbox/BDatos/Shape/PER_wat", layer: "PER_water_areas_dcw"
+    ## with 890 features
+    ## It has 5 fields
+
+``` r
+  rivers <- spTransform(rivers, crs(mun)) # just in case is in other crs 
+  
+  plot(mun, lwd = .1) # And we can plot it 
+  plot(rivers, add = TRUE, border = "blue") # add lines
+  plot(enaho, add = TRUE, col='red', pch=1, cex = .1) # add points 
 ```
 
 ![](intro_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
