@@ -13,7 +13,7 @@ a very short post, but I’m going to try to include great variety of
 tools at least for every basic analysis (e.g open spatial object, modify
 them, plot maps, polygons, points, etc.)
 
-## The basics
+## Level 0: Setup, open and inspect spatial object in R
 
 Open shapefiles:
 
@@ -108,9 +108,28 @@ going to be useful later on) as follow:
 ``` r
   rivers <- spTransform(rivers, crs(mun)) # just in case is in other crs 
   
+  
   plot(mun, lwd = .1) # And we can plot it 
   plot(rivers, add = TRUE, border = "blue") # add lines
   plot(enaho, add = TRUE, col='red', pch=1, cex = .1) # add points 
 ```
 
-![](intro_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](intro_files/figure-gfm/unnamed-chunk-5-1.png)<!-- --> Of course
+these are not the most rad graphs, but they accomplish their main
+purpose inspect the element. I will do another post with more stylish
+figures ;)
+
+## Level 1: Basic operations
+
+We’ve already discussed the initial steps for any geographic analysis.
+Now I am going to present some of the most basic operations that we can
+perform on spatial objects. The good thing is that actually, we can do
+everything that we used to do on a regular datasets (subsetting, math
+operations, bysorts, conditionals, etc…)
+
+``` r
+  mun <- mun[mun@data$NOMBPROV == 'LIMA',]
+  plot(mun)
+```
+
+![](intro_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->

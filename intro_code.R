@@ -44,3 +44,5 @@ enaho <- spTransform(enaho, crs(mun))
 # And of course we can plot it together in a graph 
 plot(mun)
 plot(enaho, add = TRUE, col='red', pch=1, cex = .2) 
+
+# Subsample 
