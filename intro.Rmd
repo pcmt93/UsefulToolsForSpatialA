@@ -1,6 +1,6 @@
 
 ---
-title: "Very useful tools in R/Python for Geospatial Analysis"
+title: "Very useful tools in R for Geospatial Analysis"
 output: github_document
 ---
   
@@ -35,7 +35,7 @@ output: github_document
     
   ```
   
-## Level 0: Setup, open and inspect spatial object in R
+## Level 0: Setup, open and inspect spatial object
   
   Open shapefiles:
   
@@ -102,6 +102,7 @@ output: github_document
     plot(enaho, add = TRUE, col='red', pch=1, cex = .1) # add points 
     
   ```
+  
   Of course these are not the most rad graphs, but they accomplish their
   main purpose inspect the element. I will do another post with more
   stylish figures ;)
@@ -116,9 +117,57 @@ output: github_document
 
   ``` {r}
   
-    mun <- mun[mun@data$NOMBPROV == 'LIMA',]
-    plot(mun)
-  
+    # Subsample
+    mun <- mun[mun$NOMBPROV == 'LIMA',] # easily subsampling
+    
+    # Include example of dummy gen here and plot // --> to do
+    
+    # Manipulating variables
+    enaho$prov_id = substr(enaho$ubigeo,1,4) # creating an prov ID
+    enaho$household_id = paste0(enaho$ubigeo, enaho$conglome, enaho$vivienda, 
+                          enaho$hogar) # creating a household ID
+    
+    # We of course can quickly check what we did (in 10 random rows):
+    
+    sample_n(enaho@data[,c("ubigeo", "conglome", "vivienda", 
+                           "hogar", "prov_id", "household_id")], 10) 
+                           
+    # Notice the use of @data in the previous command, sometimes, we need to 
+    # be more specific with R (but in most of the cases
+    # we can treat spatial dataframe just as a regular dataframe
+    
+    # Our household ID is unique of course 
+    print(length(enaho$household_id)) # Number of rows 
+    print(length(unique(enaho$household_id))) # Number of unique rows 
+    
+    # We can check the number of municipalities and provinces too 
+    
+    print(length(unique(enaho$ubigeo)))
+    print(length(unique(enaho$prov_id)))
+    
+    # We are going to subsample our household database too, in order to match with 
+    # the mun database 
+    
+    enaho <- enaho[enaho$prov_id == '1501',] # LIMA province
+    
+    # And we can check our subsampling:
+    
+    plot(mun, lwd = .5) # And we can plot it 
+    plot(enaho, add = TRUE, col='red', pch=1, cex = .1) # add points
+    
   ```
   
+  And of course, as we can transform regular dataframes with lat/long to 
+  spatial objects, we are able to turnback them to regular dataframes (this
+  can be useful in several cases, e.g when you would like to reduce estimation
+  time). Moreover, we can perform other more 'complicated' data operations, like 
+  merge with other data information.
+  
+  
+## Level 2: Spatial operations - spatial merge, aggregations, grid generation, and more
+
+
+## Level 3: Elevation and raster objects
+
+
   
