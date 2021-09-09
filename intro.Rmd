@@ -122,6 +122,8 @@ output: github_document
     
     # Include example of dummy gen here and plot // --> to do
     
+    # And more simple stuff like only keep some variables of the database
+    
     # Manipulating variables
     enaho$prov_id = substr(enaho$ubigeo,1,4) # creating an prov ID
     enaho$household_id = paste0(enaho$ubigeo, enaho$conglome, enaho$vivienda, 
@@ -158,10 +160,24 @@ output: github_document
   ```
   
   And of course, as we can transform regular dataframes with lat/long to 
-  spatial objects, we are able to turnback them to regular dataframes (this
+  spatial objects, we are able to turn them back to regular dataframes (this
   can be useful in several cases, e.g when you would like to reduce estimation
   time). Moreover, we can perform other more 'complicated' data operations, like 
   merge with other data information.
+  
+  ``` {r}
+  
+  enaho.df <- as.data.frame(enaho)
+  
+  # And we can merge this dataframe with our municipal spatial object 
+  
+  # But first some modification, we are going to pass to the municipal level 
+  
+  # And create relevant indicators as the density of population by district 
+  
+  
+  
+  ```
   
   
 ## Level 2: Spatial operations - spatial merge, aggregations, grid generation, and more
