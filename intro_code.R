@@ -160,7 +160,7 @@ enaho.df <- as.data.frame(enaho)
 enaho.ubigeo <- (enaho.df %>% group_by(ubigeo) %>% 
                  summarize(pob_mun = sum(factor07)))
 
-mun.enaho <- merge(mun, enaho.ubigeo)
+mun.enaho <- merge(mun, enaho.ubigeo, by = "ubigeo")
 
 # And create relevant indicator such as population per 
 
@@ -208,7 +208,7 @@ schools <- spTransform(schools, crs(mun.enaho)) # we need first to transform the
 schools.lima <- over(schools, mun.enaho)
 schools.lima <- spCbind(schools, schools.lima) # Here I recover the information 
 
-schools.lima <- schools.lima@data[complete.cases(schools.lima@data), ]
+schools.lima <- schools.lima[!is.na(schools.lima$ubigeo), ]
 
 plot(schools.lima)
 

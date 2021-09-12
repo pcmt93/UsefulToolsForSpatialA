@@ -249,7 +249,7 @@ output: github_document
       
     # And do the merge:
     
-    mun.enaho <- merge(mun, enaho.ubigeo)
+    mun.enaho <- merge(mun, enaho.ubigeo, by = "ubigeo")
     
     # And create relevant indicator such as population per 
     
@@ -277,8 +277,6 @@ output: github_document
   
 ## Level 2: Spatial operations - spatial merge, aggregations, grid generation, and more
 
-  In this part we are going other spatial operations 
-
   ``` {r}
   
     # For this new excercise, we are going to open a new database - School in 2013:
@@ -300,14 +298,16 @@ output: github_document
     # a merge base on the caracteristics 
     
     schools <- spTransform(schools, crs(mun.enaho)) # we need first to transform the coords
-    schools.lima <- over(schools, mun.enaho)
-    schools.lima <- spCbind(schools, schools.lima) # Here I recover the information 
     
-    schools.lima <- schools.lima@data[complete.cases(schools.lima@data), ]
+    schools.lima <- over(schools, mun.enaho) # This merge convert
+    schools.lima <- spCbind(schools, schools.lima) # Here I recover the properties
+    # of spatial objects 
     
-    plot(schools.lima)
+    schools.lima <- schools.lima[!is.na(schools.lima$ubigeo), ]
     
-
+    plot(mun, lwd = .5, main = "Schools in Lima - 2013") # And we can plot it 
+    plot(schools.lima, add = TRUE, col='green', pch= 8, cex = .1) # add points
+    
   ```
 
   

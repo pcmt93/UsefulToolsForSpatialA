@@ -173,22 +173,22 @@ operations, bysorts, conditionals, etc…)
   sample_n(mun@data[,c("IDDIST", "NOMBDIST", "FECHA", "AREA_MINAM")], 15)
 ```
 
-    ##    IDDIST                NOMBDIST        FECHA AREA_MINAM
-    ## 1  150123              PACHACAMAC   EPOC.INDEP   18589.78
-    ## 2  150143 VILLA MARIA DEL TRIUNFO   28/12/1961    6622.29
-    ## 3  150114               LA MOLINA   06/02/1962    4873.98
-    ## 4  150129             SAN BARTOLO   05/05/1946    5363.84
-    ## 5  150106              CARABAYLLO EPOCA INDEP.   35727.58
-    ## 6  150120       MAGDALENA DEL MAR   10/05/1920     326.58
-    ## 7  150121         MAGDALENA VIEJA   EPOC.INDEP     464.52
-    ## 8  150118              LURIGANCHO   EPOC.INDEP   24585.57
-    ## 9  150112           INDEPENDENCIA   16/03/1964    1608.25
-    ## 10 150138     SANTA MARIA DEL MAR   16/01/1962     775.33
-    ## 11 150127             PUNTA NEGRA   07/04/1954   12965.18
-    ## 12 150111             EL AGUSTINO   06/01/1965    1331.44
-    ## 13 150125           PUENTE PIEDRA   14/02/1927    4904.72
-    ## 14 150130               SAN BORJA   01/06/1983    1035.91
-    ## 15 150136              SAN MIGUEL   10/05/1920     958.84
+    ##    IDDIST               NOMBDIST        FECHA AREA_MINAM
+    ## 1  150103                    ATE   EPOC.INDEP    8454.77
+    ## 2  150118             LURIGANCHO   EPOC.INDEP   24585.57
+    ## 3  150121        MAGDALENA VIEJA   EPOC.INDEP     464.52
+    ## 4  150116                  LINCE   29/05/1936     274.95
+    ## 5  150105               BRE\xd1A   15/07/1949     321.28
+    ## 6  150137            SANTA ANITA   25/10/1989    1067.91
+    ## 7  150106             CARABAYLLO EPOCA INDEP.   35727.58
+    ## 8  150104               BARRANCO   26/10/1874     274.85
+    ## 9  150109            CIENEGUILLA   03/03/1970   22497.01
+    ## 10 150133 SAN JUAN DE MIRAFLORES   12/01/1965    2225.42
+    ## 11 150120      MAGDALENA DEL MAR   10/05/1920     326.58
+    ## 12 150139             SANTA ROSA   06/02/1962    1746.31
+    ## 13 150113            JESUS MARIA   13/12/1963     434.33
+    ## 14 150101                   LIMA   EPOC.INDEP    2142.82
+    ## 15 150135   SAN MARTIN DE PORRES   22/05/1950    3667.36
 
 ``` r
   # Substring last digits and convert tu numeric variable 
@@ -219,16 +219,16 @@ operations, bysorts, conditionals, etc…)
 ```
 
     ##    IDDIST               NOMBDIST year_creation AREA_MINAM
-    ## 1  150138    SANTA MARIA DEL MAR          1962     775.33
-    ## 2  150130              SAN BORJA          1983    1035.91
-    ## 3  150132 SAN JUAN DE LURIGANCHO          1967   14040.45
-    ## 4  150123             PACHACAMAC          1821   18589.78
-    ## 5  150103                    ATE          1821    8454.77
-    ## 6  150124               PUCUSANA          1943    2908.31
-    ## 7  150120      MAGDALENA DEL MAR          1920     326.58
-    ## 8  150117             LOS OLIVOS          1989    1820.75
-    ## 9  150135   SAN MARTIN DE PORRES          1950    3667.36
-    ## 10 150116                  LINCE          1936     274.95
+    ## 1  150140      SANTIAGO DE SURCO          1821    3455.92
+    ## 2  150105               BRE\xd1A          1949     321.28
+    ## 3  150102                  ANCON          1874   32487.24
+    ## 4  150137            SANTA ANITA          1989    1067.91
+    ## 5  150114              LA MOLINA          1962    4873.98
+    ## 6  150142      VILLA EL SALVADOR          1983    3397.28
+    ## 7  150107             CHACLACAYO          1940    4266.05
+    ## 8  150121        MAGDALENA VIEJA          1821     464.52
+    ## 9  150132 SAN JUAN DE LURIGANCHO          1967   14040.45
+    ## 10 150113            JESUS MARIA          1963     434.33
 
 ``` r
   # We can also easily summarize the year variable and any other:
@@ -349,16 +349,16 @@ operations, bysorts, conditionals, etc…)
 ```
 
     ##    ubigeo conglome vivienda hogar prov_id      household_id
-    ## 1  050109   005790      149    11    0501 05010900579014911
-    ## 2  210301   019552      189    11    2103 21030101955218911
-    ## 3  180303   008535      012    11    1803 18030300853501211
-    ## 4  131203   007286      092    11    1312 13120300728609211
-    ## 5  150137   007693      111    11    1501 15013700769311111
-    ## 6  150605   008048      031    11    1506 15060500804803111
-    ## 7  170101   008405      063    11    1701 17010100840506311
-    ## 8  150101   007706      196    11    1501 15010100770619611
-    ## 9  100307   006607      063    11    1003 10030700660706311
-    ## 10 080605   006350      008    11    0806 08060500635000811
+    ## 1  150601   018447      063    11    1506 15060101844706311
+    ## 2  200105   008873      091    11    2001 20010500887309111
+    ## 3  250105   009604      029    11    2501 25010500960402911
+    ## 4  150111   017899      109    11    1501 15011101789910911
+    ## 5  150140   018176      032    11    1501 15014001817603211
+    ## 6  090103   006460      010    11    0901 09010300646001011
+    ## 7  120404   007031      008    11    1204 12040400703100811
+    ## 8  040204   010449      015    11    0402 04020401044901511
+    ## 9  190301   019128      019    11    1903 19030101912801911
+    ## 10 070101   011368      022    11    0701 07010101136802211
 
 ``` r
   # Notice the use of @data in the previous command, sometimes, we need to 
@@ -425,7 +425,7 @@ operations, like merge with other data information.
 ``` r
   # And do the merge:
   
-  mun.enaho <- merge(mun, enaho.ubigeo)
+  mun.enaho <- merge(mun, enaho.ubigeo, by = "ubigeo")
   
   # And create relevant indicator such as population per 
   
@@ -459,8 +459,6 @@ operations, like merge with other data information.
 
 ## Level 2: Spatial operations - spatial merge, aggregations, grid generation, and more
 
-In this part we are going other spatial operations
-
 ``` r
   # For this new excercise, we are going to open a new database - School in 2013:
 
@@ -488,28 +486,31 @@ In this part we are going other spatial operations
 ```
 
     ##    cod_mod
-    ## 1  1240779
-    ## 2   704957
-    ## 3  1212265
-    ## 4   304196
-    ## 5  1383801
-    ## 6  1087790
-    ## 7  1000058
-    ## 8  1378330
-    ## 9  1568237
-    ## 10 1595347
+    ## 1   527937
+    ## 2   243584
+    ## 3  1572676
+    ## 4  1558873
+    ## 5  1138056
+    ## 6   368399
+    ## 7   836023
+    ## 8  1567049
+    ## 9   472134
+    ## 10  433920
 
 ``` r
   # So in order to select only Lima schools, we have to do an spatial merge
   # a merge base on the caracteristics 
   
   schools <- spTransform(schools, crs(mun.enaho)) # we need first to transform the coords
-  schools.lima <- over(schools, mun.enaho)
-  schools.lima <- spCbind(schools, schools.lima) # Here I recover the information 
   
-  schools.lima <- schools.lima@data[complete.cases(schools.lima@data), ]
+  schools.lima <- over(schools, mun.enaho) # This merge convert
+  schools.lima <- spCbind(schools, schools.lima) # Here I recover the properties
+  # of spatial objects 
   
-  plot(schools.lima)
+  schools.lima <- schools.lima[!is.na(schools.lima$ubigeo), ]
+  
+  plot(mun, lwd = .5, main = "Schools in Lima - 2013") # And we can plot it 
+  plot(schools.lima, add = TRUE, col='green', pch= 8, cex = .1) # add points
 ```
 
 ![](intro_files/figure-gfm/unnamed-chunk-8-2.png)<!-- -->
