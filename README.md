@@ -13,7 +13,5 @@ For now, this is the only post available:
 
 * [Basics for using R for spatial analysis](https://github.com/pcmt93/UsefulToolsForSpatialA/blob/main/intro.md) 
 
-
-
 Please feel free to correct any mistakes or type, and of course I more than open 
 to any suggestion for improving this repository.
