@@ -174,21 +174,21 @@ operations, bysorts, conditionals, etc…)
 ```
 
     ##    IDDIST               NOMBDIST        FECHA AREA_MINAM
-    ## 1  150103                    ATE   EPOC.INDEP    8454.77
-    ## 2  150118             LURIGANCHO   EPOC.INDEP   24585.57
-    ## 3  150121        MAGDALENA VIEJA   EPOC.INDEP     464.52
-    ## 4  150116                  LINCE   29/05/1936     274.95
-    ## 5  150105               BRE\xd1A   15/07/1949     321.28
-    ## 6  150137            SANTA ANITA   25/10/1989    1067.91
-    ## 7  150106             CARABAYLLO EPOCA INDEP.   35727.58
-    ## 8  150104               BARRANCO   26/10/1874     274.85
-    ## 9  150109            CIENEGUILLA   03/03/1970   22497.01
-    ## 10 150133 SAN JUAN DE MIRAFLORES   12/01/1965    2225.42
-    ## 11 150120      MAGDALENA DEL MAR   10/05/1920     326.58
-    ## 12 150139             SANTA ROSA   06/02/1962    1746.31
-    ## 13 150113            JESUS MARIA   13/12/1963     434.33
-    ## 14 150101                   LIMA   EPOC.INDEP    2142.82
-    ## 15 150135   SAN MARTIN DE PORRES   22/05/1950    3667.36
+    ## 1  150126          PUNTA HERMOSA   07/04/1954   12194.62
+    ## 2  150117             LOS OLIVOS   06/04/1989    1820.75
+    ## 3  150119                  LURIN   02/01/1857   18763.08
+    ## 4  150136             SAN MIGUEL   10/05/1920     958.84
+    ## 5  150114              LA MOLINA   06/02/1962    4873.98
+    ## 6  150132 SAN JUAN DE LURIGANCHO   13/01/1967   14040.45
+    ## 7  150138    SANTA MARIA DEL MAR   16/01/1962     775.33
+    ## 8  150108             CHORRILLOS   02/01/1857    3701.51
+    ## 9  150112          INDEPENDENCIA   16/03/1964    1608.25
+    ## 10 150105               BRE\xd1A   15/07/1949     321.28
+    ## 11 150131             SAN ISIDRO   24/04/1931     970.02
+    ## 12 150140      SANTIAGO DE SURCO  EPOC.INDEP.    3455.92
+    ## 13 150122             MIRAFLORES   02/01/1857     914.88
+    ## 14 150106             CARABAYLLO EPOCA INDEP.   35727.58
+    ## 15 150102                  ANCON   29/10/1874   32487.24
 
 ``` r
   # Substring last digits and convert tu numeric variable 
@@ -219,16 +219,16 @@ operations, bysorts, conditionals, etc…)
 ```
 
     ##    IDDIST               NOMBDIST year_creation AREA_MINAM
-    ## 1  150140      SANTIAGO DE SURCO          1821    3455.92
-    ## 2  150105               BRE\xd1A          1949     321.28
-    ## 3  150102                  ANCON          1874   32487.24
-    ## 4  150137            SANTA ANITA          1989    1067.91
-    ## 5  150114              LA MOLINA          1962    4873.98
-    ## 6  150142      VILLA EL SALVADOR          1983    3397.28
-    ## 7  150107             CHACLACAYO          1940    4266.05
-    ## 8  150121        MAGDALENA VIEJA          1821     464.52
-    ## 9  150132 SAN JUAN DE LURIGANCHO          1967   14040.45
-    ## 10 150113            JESUS MARIA          1963     434.33
+    ## 1  150115            LA VICTORIA          1920     914.18
+    ## 2  150133 SAN JUAN DE MIRAFLORES          1965    2225.42
+    ## 3  150134               SAN LUIS          1968     348.74
+    ## 4  150126          PUNTA HERMOSA          1954   12194.62
+    ## 5  150105               BRE\xd1A          1949     321.28
+    ## 6  150123             PACHACAMAC          1821   18589.78
+    ## 7  150142      VILLA EL SALVADOR          1983    3397.28
+    ## 8  150139             SANTA ROSA          1962    1746.31
+    ## 9  150106             CARABAYLLO          1821   35727.58
+    ## 10 150131             SAN ISIDRO          1931     970.02
 
 ``` r
   # We can also easily summarize the year variable and any other:
@@ -349,16 +349,16 @@ operations, bysorts, conditionals, etc…)
 ```
 
     ##    ubigeo conglome vivienda hogar prov_id      household_id
-    ## 1  150601   018447      063    11    1506 15060101844706311
-    ## 2  200105   008873      091    11    2001 20010500887309111
-    ## 3  250105   009604      029    11    2501 25010500960402911
-    ## 4  150111   017899      109    11    1501 15011101789910911
-    ## 5  150140   018176      032    11    1501 15014001817603211
-    ## 6  090103   006460      010    11    0901 09010300646001011
-    ## 7  120404   007031      008    11    1204 12040400703100811
-    ## 8  040204   010449      015    11    0402 04020401044901511
-    ## 9  190301   019128      019    11    1903 19030101912801911
-    ## 10 070101   011368      022    11    0701 07010101136802211
+    ## 1  150142   007939      078    11    1501 15014200793907811
+    ## 2  130105   007091      143    33    1301 13010500709114333
+    ## 3  150135   007516      038    11    1501 15013500751603811
+    ## 4  150140   007872      096    11    1501 15014000787209611
+    ## 5  130204   007193      098    11    1302 13020400719309811
+    ## 6  160706   018718      070    11    1607 16070601871807011
+    ## 7  210102   019517      053    11    2101 21010201951705311
+    ## 8  150714   018466      029    11    1507 15071401846602911
+    ## 9  110102   016866      080    11    1101 11010201686608011
+    ## 10 110205   006778      001    11    1102 11020500677800111
 
 ``` r
   # Notice the use of @data in the previous command, sometimes, we need to 
@@ -486,16 +486,16 @@ operations, like merge with other data information.
 ```
 
     ##    cod_mod
-    ## 1   527937
-    ## 2   243584
-    ## 3  1572676
-    ## 4  1558873
-    ## 5  1138056
-    ## 6   368399
-    ## 7   836023
-    ## 8  1567049
-    ## 9   472134
-    ## 10  433920
+    ## 1  1025410
+    ## 2  1588011
+    ## 3   389361
+    ## 4   296251
+    ## 5   543769
+    ## 6   365759
+    ## 7  1495365
+    ## 8   546382
+    ## 9  1620863
+    ## 10  248252
 
 ``` r
   # So in order to select only Lima schools, we have to do an spatial merge
